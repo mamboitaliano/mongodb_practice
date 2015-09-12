@@ -5,7 +5,7 @@ var url = 'mongodb://localhost:27017/test';
 
 // find documents whose borough field equals "Manhattan"
 var findRestaurants = function(db, callback) {
-	var cursor = db.collection('restaurants').find( {"borough": "Manhattan"} ); // <----- Specify criteria here
+	var cursor = db.collection('restaurants').find( {"name": "Juni"} ); // <----- Specify criteria here
 	cursor.each(function(err, doc) {
 		assert.equal(err, null);
 		if (doc != null) {
