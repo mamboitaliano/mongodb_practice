@@ -17,9 +17,9 @@ var indexRestaurants = function(db, callback) {
 };
 
 // call indexRestaurants
-MongoClient.connect(url, function(null, err) {
+MongoClient.connect(url, function(err, db) {
 	assert.equal(null, err);
-	
+
 	indexRestaurants(db, function() {
 		db.close();
 	});
